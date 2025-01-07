@@ -121,12 +121,6 @@ body {
 }
 
 
-
-/* Sticky Note Effect 
-#task-list li:hover {
-    transform: rotate(0deg); 
-}*/
-
 /* Mobile Styling */
 @media (max-width: 768px) {
     .container {
