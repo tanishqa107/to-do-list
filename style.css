@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('pexels.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-y: hidden; 
+}
+
+/* Left Section */
+.left-section {
+    position: fixed; 
+    top: 50%; 
+    left: 5%; 
+    transform: translateY(-50%); 
+    width: 30%; 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10; 
+}
+
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+#task-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-task-btn {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-task-btn:hover {
+    background-color: #218838;
+}
+
+/* Right Section (Task list) */
+.right-section {
+    width: 60%; 
+    margin-left: 35%; 
+    padding: 20px;
+    overflow-y: auto; 
+    max-height: 100vh; 
+}
+
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    background: #ffffff;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 200px;
+    display: inline-block;
+    box-sizing: border-box;
+    word-wrap: break-word; 
+    overflow: hidden; 
+    height: auto; 
+}
+
+
+#task-list li button {
+    position: relative; 
+    display: inline-block; 
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#task-list li button.edit-btn:hover {
+    background-color: #0056b3; 
+}
+
+#task-list li button.delete-btn {
+    background-color: #dc3545; 
+}
+
+#task-list li button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+
+/* Sticky Note Effect 
+#task-list li:hover {
+    transform: rotate(0deg); 
+}*/
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section, .right-section {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
